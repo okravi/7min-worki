@@ -28,8 +28,17 @@ class ExerciseActivity : AppCompatActivity() {
             onBackPressed()
         }
 
-        setRestProgressBar()
+        setupRestView()
 
+    }
+
+    private fun setupRestView(){
+        if(restTimer != null){
+            restTimer?.cancel()
+            restProgress = 0
+        }
+
+        setRestProgressBar()
     }
 
     override fun onDestroy() {
