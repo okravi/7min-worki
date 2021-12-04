@@ -97,12 +97,12 @@ class ExerciseActivity : AppCompatActivity() {
         exerciseTimer = object: CountDownTimer(30000, 1000){
             override fun onTick(p0: Long) {
                 exerciseProgress++
-                binding?.progressBarExercise?.progress = 10 - exerciseProgress
-                binding?.tvTimerExercise?.text = (10 - exerciseProgress).toString()
+                binding?.progressBarExercise?.progress = 30 - exerciseProgress
+                binding?.tvTimerExercise?.text = (30 - exerciseProgress).toString()
             }
 
             override fun onFinish() {
-                Toast.makeText(this@ExerciseActivity, "30 seconds are over? let's rest" ,
+                Toast.makeText(this@ExerciseActivity, "30 seconds are over, let's rest" ,
                     Toast.LENGTH_SHORT).show()
             }
 
