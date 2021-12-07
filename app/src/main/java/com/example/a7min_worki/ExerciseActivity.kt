@@ -51,7 +51,7 @@ class ExerciseActivity : AppCompatActivity() {
     }
 
     private fun setupExerciseView(){
-       binding?.flProgressBar?.visibility = View.INVISIBLE
+       binding?.flRestView?.visibility = View.INVISIBLE
        binding?.tvTitle?.text = "Exercise"
        binding?.flExerciseView?.visibility = View.VISIBLE
 
