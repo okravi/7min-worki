@@ -20,6 +20,10 @@ class ExerciseModel (
         this.name = name
     }
 
+    fun getName(): String {
+        return name
+    }
+
     fun getImage(): Int {
         return image
     }

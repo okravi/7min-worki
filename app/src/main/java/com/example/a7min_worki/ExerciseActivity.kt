@@ -42,6 +42,12 @@ class ExerciseActivity : AppCompatActivity() {
     }
 
     private fun setupRestView(){
+        binding?.flRestView?.visibility = View.VISIBLE
+        binding?.tvTitle?.visibility = View.VISIBLE
+        binding?.tvExerciseName?.visibility = View.INVISIBLE
+        binding?.flExerciseView?.visibility = View.INVISIBLE
+        binding?.ivImage?.visibility = View.INVISIBLE
+
         if(restTimer != null){
             restTimer?.cancel()
             restProgress = 0
@@ -52,13 +58,18 @@ class ExerciseActivity : AppCompatActivity() {
 
     private fun setupExerciseView(){
        binding?.flRestView?.visibility = View.INVISIBLE
-       binding?.tvTitle?.text = "Exercise"
+       binding?.tvTitle?.visibility = View.INVISIBLE
+       binding?.tvExerciseName?.visibility = View.VISIBLE
        binding?.flExerciseView?.visibility = View.VISIBLE
+       binding?.ivImage?.visibility = View.VISIBLE
 
         if(exerciseTimer != null){
             exerciseTimer?.cancel()
             exerciseProgress = 0
         }
+
+        binding?.ivImage?.setImageResource(exerciseList!![currentExercisePosition].getImage())
+        binding?.tvExerciseName?.text = exerciseList!![currentExercisePosition].getName()
 
         setExerciseProgressBar()
 
@@ -91,7 +102,7 @@ class ExerciseActivity : AppCompatActivity() {
 
             override fun onFinish() {
                 currentExercisePosition++
-               setupExerciseView()
+                setupExerciseView()
             }
 
         }.start()
@@ -108,8 +119,11 @@ class ExerciseActivity : AppCompatActivity() {
             }
 
             override fun onFinish() {
-                Toast.makeText(this@ExerciseActivity, "30 seconds are over, let's rest" ,
-                    Toast.LENGTH_SHORT).show()
+               if(currentExercisePosition < exerciseList?.size!! - 1){
+                   setupRestView()
+               }else{
+                   Toast.makeText(this@ExerciseActivity,"You have completed the workout!", Toast.LENGTH_SHORT).show()
+               }
             }
 
         }.start()
