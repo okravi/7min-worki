@@ -4,7 +4,7 @@
 
     <queries>
         <intent>
-            <action android:name="android.intent.action.TTS_SERVICE"/>
+            <action android:name="android.intent.action.TTS_SERVICE" />
         </intent>
     </queries>
 
@@ -15,6 +15,11 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.7minworki">
+        <activity
+            android:name=".FinishActivity"
+            android:exported="false"
+            android:label="@string/title_activity_finish"
+            android:theme="@style/Theme.7minworki.NoActionBar" />
         <activity
             android:name=".ExerciseActivity"
             android:exported="false" />
