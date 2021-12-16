@@ -12,14 +12,26 @@ import com.example.a7min_worki.databinding.ActivityFinishBinding
 class FinishActivity : AppCompatActivity() {
 
 
-    private lateinit var binding: ActivityFinishBinding
+    private var binding: ActivityFinishBinding? = null
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
 
         binding = ActivityFinishBinding.inflate(layoutInflater)
-        setContentView(binding.root)
+        setContentView(binding?.root)
 
+        setSupportActionBar(binding?.toolbarFinishActivity)
 
+        if(supportActionBar != null){
+            supportActionBar?.setDisplayHomeAsUpEnabled(true)
+        }
+
+        binding?.toolbarFinishActivity?.setNavigationOnClickListener{
+            onBackPressed()
+        }
+
+        binding?.btnFinish?.setOnClickListener{
+            finish()
+        }
     }
 }

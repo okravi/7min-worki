@@ -1,5 +1,6 @@
 package com.example.a7min_worki
 
+import android.content.Intent
 import android.media.MediaPlayer
 import android.net.Uri
 import androidx.appcompat.app.AppCompatActivity
@@ -20,8 +21,8 @@ class ExerciseActivity : AppCompatActivity(), TextToSpeech.OnInitListener {
 
     private var restTimer: CountDownTimer? = null
     private var restProgress = 0
-    private var restTimerDuration: Long = 10
-    private var exerciseTimerDuration: Long = 30
+    private var restTimerDuration: Long = 1
+    private var exerciseTimerDuration: Long = 3
     private var exerciseTimer: CountDownTimer? = null
     private var exerciseProgress = 0
 
@@ -186,7 +187,9 @@ class ExerciseActivity : AppCompatActivity(), TextToSpeech.OnInitListener {
                if(currentExercisePosition < exerciseList?.size!! - 1){
                    setupRestView()
                }else{
-                   Toast.makeText(this@ExerciseActivity,"You have completed the workout!", Toast.LENGTH_SHORT).show()
+                   finish()
+                   val intent = Intent(this@ExerciseActivity, FinishActivity::class.java)
+                   startActivity(intent)
                }
             }
 
