@@ -3,20 +3,15 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
-        <entry key="..\:/Kotlin-prodjects-current/7minworki/app/src/main/res/drawable/circular_progress_bar.xml" value="0.3074074074074074" />
-        <entry key="..\:/Kotlin-prodjects-current/7minworki/app/src/main/res/drawable/circular_progress_gray.xml" value="0.3074074074074074" />
-        <entry key="..\:/Kotlin-prodjects-current/7minworki/app/src/main/res/drawable/item_circular_accent_border.xml" value="0.3074074074074074" />
-        <entry key="..\:/Kotlin-prodjects-current/7minworki/app/src/main/res/drawable/item_circular_color_accent_background.xml" value="0.3074074074074074" />
-        <entry key="..\:/Kotlin-prodjects-current/7minworki/app/src/main/res/drawable/item_circular_color_gray_background.xml" value="0.38981481481481484" />
-        <entry key="..\:/Kotlin-prodjects-current/7minworki/app/src/main/res/drawable/item_circular_thin_color_accent_border.xml" value="0.23489583333333333" />
-        <entry key="..\:/Kotlin-prodjects-current/7minworki/app/src/main/res/drawable/item_color_accent_border_ripple_background.xml" value="0.3074074074074074" />
-        <entry key="..\:/Kotlin-prodjects-current/7minworki/app/src/main/res/layout/activity_bmi.xml" value="0.21875" />
-        <entry key="..\:/Kotlin-prodjects-current/7minworki/app/src/main/res/layout/activity_exercise.xml" value="0.21875" />
-        <entry key="..\:/Kotlin-prodjects-current/7minworki/app/src/main/res/layout/activity_finish.xml" value="0.38697916666666665" />
-        <entry key="..\:/Kotlin-prodjects-current/7minworki/app/src/main/res/layout/activity_finish_form.xml" value="0.38697916666666665" />
-        <entry key="..\:/Kotlin-prodjects-current/7minworki/app/src/main/res/layout/activity_main.xml" value="0.2821557971014493" />
-        <entry key="..\:/Kotlin-prodjects-current/7minworki/app/src/main/res/layout/dialog_custom_back_confirmation.xml" value="0.21875" />
-        <entry key="..\:/Kotlin-prodjects-current/7minworki/app/src/main/res/layout/item_exrcise_status.xml" value="0.38697916666666665" />
+        <entry key="..\:/Kotlin-prodjects-current/7minworki/app/src/main/res/drawable-v24/ic_launcher_foreground.xml" value="0.23489583333333333" />
+        <entry key="..\:/Kotlin-prodjects-current/7minworki/app/src/main/res/drawable/circular_progress_bar.xml" value="0.23489583333333333" />
+        <entry key="..\:/Kotlin-prodjects-current/7minworki/app/src/main/res/drawable/circular_progress_gray.xml" value="0.23489583333333333" />
+        <entry key="..\:/Kotlin-prodjects-current/7minworki/app/src/main/res/drawable/drawable_units_tab_selector.xml" value="0.23125" />
+        <entry key="..\:/Kotlin-prodjects-current/7minworki/app/src/main/res/drawable/ic_launcher_background.xml" value="0.23489583333333333" />
+        <entry key="..\:/Kotlin-prodjects-current/7minworki/app/src/main/res/drawable/item_circular_accent_border.xml" value="0.23489583333333333" />
+        <entry key="..\:/Kotlin-prodjects-current/7minworki/app/src/main/res/layout/content_finish.xml" value="0.21875" />
+        <entry key="..\:/Kotlin-prodjects-current/7minworki/app/src/main/res/layout/drawable_units_tab_selector.xml" value="0.12952898550724637" />
+        <entry key="..\:/Kotlin-prodjects-current/7minworki/app/src/main/res/layout/fragment_first.xml" value="0.12952898550724637" />
       </map>
     </option>
   </component>

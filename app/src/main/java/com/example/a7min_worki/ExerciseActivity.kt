@@ -23,8 +23,8 @@ class ExerciseActivity : AppCompatActivity(), TextToSpeech.OnInitListener {
 
     private var restTimer: CountDownTimer? = null
     private var restProgress = 0
-    private var restTimerDuration: Long = 1
-    private var exerciseTimerDuration: Long = 3
+    private var restTimerDuration: Long = 2
+    private var exerciseTimerDuration: Long = 4
     private var exerciseTimer: CountDownTimer? = null
     private var exerciseProgress = 0
 
