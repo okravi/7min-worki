@@ -39,6 +39,18 @@ class BMIActivity : AppCompatActivity(){
             onBackPressed()
         }
 
+        makeVisibleMetricUnitsView()
+        
+        binding?.rgUnits?.setOnCheckedChangeListener { _, checkedId: Int ->
+            if(checkedId == R.id.rbMetricUnits){
+                makeVisibleMetricUnitsView()
+            }else{
+                makeVisibleUsUnitsView()
+            }
+
+
+        }
+
         binding?.btnCalculateBMIResult?.setOnClickListener{
             if(validateMetricUnits()){
                 val heightValue: Float = binding?.etMetricUnitHeight?.text.toString().toFloat() / 100
@@ -60,7 +72,25 @@ class BMIActivity : AppCompatActivity(){
         binding?.tilUsUnitHeightFeet?.visibility = View.GONE
         binding?.tilUsUnitHeightInch?.visibility = View.GONE
 
+        binding?.etMetricUnitHeight?.text!!.clear()
+        binding?.etMetricUnitWeight?.text!!.clear()
 
+        binding?.llDisplayBMIResult?.visibility = View.INVISIBLE
+    }
+
+    private fun makeVisibleUsUnitsView(){
+        currentVisibleView = US_UNITS_VIEW
+        binding?.tilMetricUnitWeight?.visibility = View.GONE
+        binding?.tilMetricUnitHeight?.visibility = View.GONE
+        binding?.tilUsUnitWeight?.visibility = View.VISIBLE
+        binding?.tilUsUnitHeightFeet?.visibility = View.VISIBLE
+        binding?.tilUsUnitHeightInch?.visibility = View.VISIBLE
+
+        binding?.etUsUnitHeightFeet?.text!!.clear()
+        binding?.etUsUnitHeightInch?.text!!.clear()
+        binding?.etUsUnitWeight?.text!!.clear()
+
+        binding?.llDisplayBMIResult?.visibility = View.INVISIBLE
     }
 
     private fun displayMBIResults(bmi: Float){

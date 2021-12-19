@@ -112,7 +112,7 @@
         android:layout_height="wrap_content">
 
         <androidx.appcompat.widget.AppCompatEditText
-            android:id="@+id/etUsMetricUnitHeightFeet"
+            android:id="@+id/etUsUnitHeightFeet"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:hint="Feet"
@@ -143,7 +143,7 @@
         android:layout_height="wrap_content">
 
         <androidx.appcompat.widget.AppCompatEditText
-            android:id="@+id/etUsMetricUnitHeightInch"
+            android:id="@+id/etUsUnitHeightInch"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:hint="Inch"
