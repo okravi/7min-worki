@@ -11,7 +11,14 @@ import java.math.RoundingMode
 
 class BMIActivity : AppCompatActivity(){
 
+    companion object {
+        private const val METRICS_UNIT_VIEW = "METRIC_UNIT_VIEW"
+        private const val US_UNITS_VIEW = "US_UNIT_VIEW"
+    }
+
+    private var currentVisibleView: String = METRICS_UNIT_VIEW
     private var binding: ActivityBmiBinding? = null
+
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -43,6 +50,17 @@ class BMIActivity : AppCompatActivity(){
                 Toast.makeText(this@BMIActivity, "PLease enter valid values", Toast.LENGTH_SHORT).show()
             }
         }
+    }
+
+    private fun makeVisibleMetricUnitsView(){
+        currentVisibleView = METRICS_UNIT_VIEW
+        binding?.tilMetricUnitWeight?.visibility = View.VISIBLE
+        binding?.tilMetricUnitHeight?.visibility = View.VISIBLE
+        binding?.tilUsUnitWeight?.visibility = View.GONE
+        binding?.tilUsUnitHeightFeet?.visibility = View.GONE
+        binding?.tilUsUnitHeightInch?.visibility = View.GONE
+
+
     }
 
     private fun displayMBIResults(bmi: Float){
