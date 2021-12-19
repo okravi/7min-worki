@@ -80,8 +80,8 @@ class BMIActivity : AppCompatActivity(){
 
     private fun makeVisibleUsUnitsView(){
         currentVisibleView = US_UNITS_VIEW
-        binding?.tilMetricUnitWeight?.visibility = View.GONE
-        binding?.tilMetricUnitHeight?.visibility = View.GONE
+        binding?.tilMetricUnitWeight?.visibility = View.INVISIBLE
+        binding?.tilMetricUnitHeight?.visibility = View.INVISIBLE
         binding?.tilUsUnitWeight?.visibility = View.VISIBLE
         binding?.tilUsUnitHeightFeet?.visibility = View.VISIBLE
         binding?.tilUsUnitHeightInch?.visibility = View.VISIBLE
