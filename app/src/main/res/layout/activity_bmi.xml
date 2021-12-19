@@ -95,9 +95,8 @@
 
     </com.google.android.material.textfield.TextInputLayout>
 
-    //US Weight input below!
     <com.google.android.material.textfield.TextInputLayout
-        android:layout_below="@id/tilMetricUnitWeight"
+        android:layout_below="@id/tilUsUnitWeight"
         android:id="@+id/tilUsUnitHeightFeet"
         app:boxStrokeColor="@color/colorAccent"
         app:hintTextColor="@color/colorAccent"
@@ -128,7 +127,7 @@
         android:layout_centerHorizontal="true" />
 
     <com.google.android.material.textfield.TextInputLayout
-        android:layout_below="@id/tilMetricUnitWeight"
+        android:layout_below="@id/tilUsUnitWeight"
         android:id="@+id/tilUsUnitHeightInch"
         app:boxStrokeColor="@color/colorAccent"
         app:hintTextColor="@color/colorAccent"
@@ -149,18 +148,9 @@
             android:hint="Inch"
             android:inputType="numberDecimal"
             android:textSize="16sp" />
+!!!This should be removed!!!
 
-        <androidx.appcompat.widget.AppCompatEditText
-            android:id="@+id/etMetricUnitHeight"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:hint="Height in cm"
-            android:inputType="numberDecimal"
-            android:textSize="16sp"
-            tools:ignore="SpeakableTextPresentCheck" />
     </com.google.android.material.textfield.TextInputLayout>
-    <!--end-->
-
 
     <com.google.android.material.textfield.TextInputLayout
         android:id="@+id/tilMetricUnitHeight"
@@ -174,6 +164,15 @@
         android:layout_marginBottom="10dp"
         app:boxStrokeColor="@color/colorAccent"
         app:hintTextColor="@color/colorAccent">
+
+        <androidx.appcompat.widget.AppCompatEditText
+            android:id="@+id/etMetricUnitHeight"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Height in cm"
+            android:inputType="numberDecimal"
+            android:textSize="16sp"
+            tools:ignore="SpeakableTextPresentCheck" />
 
     </com.google.android.material.textfield.TextInputLayout>
 
