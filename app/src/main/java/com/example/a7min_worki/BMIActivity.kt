@@ -61,7 +61,7 @@ class BMIActivity : AppCompatActivity(){
                     displayMBIResults(bmi)
                 }
                 (validateUsUnits() && (currentVisibleView == US_UNITS_VIEW)) -> {
-                    var usHeightValue: Float = binding?.etUsUnitHeightFeet?.text.toString().toFloat() * 12
+                    var usHeightValue: Float = binding?.etUsUnitHeightFeet?.text. toString().toFloat() * 12
                     if ( binding?.etUsUnitHeightInch?.text!!.isNotBlank()){
                         usHeightValue += binding?.etUsUnitHeightInch?.text.toString().toFloat()
 
@@ -72,7 +72,8 @@ class BMIActivity : AppCompatActivity(){
                     displayMBIResults(bmi)
                 }
                 else -> {
-                    Toast.makeText(this@BMIActivity, "Please enter valid values", Toast.LENGTH_SHORT).show()
+                    Toast.makeText(this@BMIActivity, "Please enter valid values",
+                        Toast.LENGTH_SHORT).show()
                 }
             }
         }
